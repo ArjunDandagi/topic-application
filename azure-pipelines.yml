@@ -15,7 +15,7 @@ variables:
   ANOTHER: $(git rev-parse --short=7 HEAD)
 
 steps:
-- script: TAG is  $(TAG) and shortSha is $(GIT_TAG) and ANOTHER is $(ANOTHER)
+- script: echo TAG is  $(TAG) and shortSha is $(GIT_TAG) and ANOTHER is $(ANOTHER)
   displayName: "ECHO TAG"
 
 - script: env | sort
