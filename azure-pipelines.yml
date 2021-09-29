@@ -9,7 +9,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  TAG: $(git describe --always)
+
 steps:
+- script: echo $(TAG)
+  displayName: "ECHO TAG"
+- script: exit 0
+  displayName: "exit 0"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
